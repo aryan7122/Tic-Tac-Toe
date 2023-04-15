@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './border.css';
 import Square from "./Square";
 
 const Board = () => {
@@ -21,7 +22,7 @@ const Board = () => {
       const [a, b, c] = logic;
       if (state[a] !== null && state[a] === state[b] && state[a] === state[c]) {
         return state[a];
-      }
+      } 
     }
 
     return false;
@@ -34,7 +35,7 @@ const Board = () => {
       return;
     }
     const copyState = [...state];
-    copyState[index] = isXTurn ? "0" : "x";
+    copyState[index] = isXTurn ? "🅾️" : "❎";
     setState(copyState);
     setIsXTurn(!isXTurn);
   };
@@ -44,19 +45,35 @@ const Board = () => {
   };
 
   return (
-    <div className="board-container">
-      {isWinner ? (
-        <>
-          {isWinner} won the game{" "}
+    <>
+
+      <div >
+        {isWinner ? (
+        <h4 className="popup">
+          {isWinner} 🎉 won the game {" "} <br />
           <button onClick={handleReset}>Play Again</button>
-        </>
+        </h4>
       ) : (
-        <>
-          <h4>Player {isXTurn ? "of" : "x"} please move</h4>
+        ""
+      )}
+    </div>
+    <div className="board-container">
+      {/* {isWinner ? (
+        <h4 className="popup">
+          {isWinner} 🎉 won the game {" "} <br />
+          <button onClick={handleReset}>Play Again</button>
+        </h4>
+      ) : (
+        ""
+      )} */}
+          <>
+          <button onClick={handleReset}>Play Again</button>
+            <h4>Player {isXTurn ? "🅾️" : "❎"}  move</h4>
+        <div >
           <div className="board-row">
-            <Square onClick={() => handleClick(0)} value={state[0]} />
-            <Square onClick={() => handleClick(1)} value={state[1]} />
-            <Square onClick={() => handleClick(2)} value={state[2]} />
+            <Square className="box_t"  onClick={() => handleClick(0)} value={state[0]} />
+            <Square className="box_t" onClick={() => handleClick(1)} value={state[1]} />
+            <Square className="box_t" onClick={() => handleClick(2)} value={state[2]} />
           </div>
           <div className="board-row">
             <Square onClick={() => handleClick(3)} value={state[3]} />
@@ -68,9 +85,10 @@ const Board = () => {
             <Square onClick={() => handleClick(7)} value={state[7]} />
             <Square onClick={() => handleClick(8)} value={state[8]} />
           </div>
-        </>
-      )}
-    </div>
+            </div>
+          </>
+      </div>
+    </>
   );
 };
 

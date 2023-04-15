@@ -1,0 +1,92 @@
+.board-row{
+    background: rgb(51, 51, 51);
+    margin: 0 auto ;
+    box-shadow: 5px 5px 10px 5px ;
+}
+.board-row .Square{
+}
+
+
+
+
+
+.board-container{
+    font-size: 50px;
+    width: 50%;
+    margin: auto;
+    color: rgb(0, 0, 0);
+}
+@media only screen and (max-width: 550px) {
+    .board-container{
+
+        width: 80%;
+    }
+
+}
+.board-container button{
+    font-size: 20px;
+    color: rgb(164, 164, 164);
+    background: black;
+    outline: none;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px 1px black;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.board-container button:hover{
+    background: rgb(36, 36, 36);
+    transition: .3s linear;
+}
+.board-container button:active{
+    box-shadow: 0px 0px 10px 3px black;
+    background: rgb(0, 0, 0);
+    
+}
+.board-container h4{
+    font-size: 34px !important;
+    color: rgb(255, 255, 255);
+    padding-bottom: 30px;
+    /* margin-left:-25%; */
+    padding: 0px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+.popup{
+    position: absolute;
+    background: rgba(58, 58, 58, 0.82);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 70px;
+    color: greenyellow;
+    text-shadow: 0px 0px 30px wheat;
+    text-align: center;
+}
+
+
+.popup button {
+    font-size: 50px;
+    color: rgb(164, 164, 164);
+    background: black;
+    outline: none;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0px 0px 5px 1px black;
+    border-radius: 4px;
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background: rgb(58, 58, 58);
+    transition: .3s linear;
+}
+
+.popup button:active {
+    box-shadow: 0px 0px 10px 3px black;
+    background: rgb(0, 0, 0);
+
+}

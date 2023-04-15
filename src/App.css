@@ -1,9 +1,12 @@
 .board-row {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  border-radius: 0px 0px 10px 20px white;
 }
 
+
 .board-container {
-  margin: 20px;
+  margin: 50px;
 }
+
