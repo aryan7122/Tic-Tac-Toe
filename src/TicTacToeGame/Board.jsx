@@ -49,9 +49,9 @@ const Board = () => {
 
       <div >
         {isWinner ? (
-        <h4 className="popup">
-          {isWinner} 🎉 won the game {" "} <br />
-          <button onClick={handleReset}>Play Again</button>
+          <h4 className="popup ">
+            {isWinner} 🎉 <span className="animate-charcter"> won the game {" "}</span> <br />
+            <button onClick={handleReset}>Play Again</button>
         </h4>
       ) : (
         ""
