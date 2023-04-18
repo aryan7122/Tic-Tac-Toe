@@ -1,4 +1,4 @@
-.board-row {
+.row {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,7 @@
 }
 
 
-.board-container {
+.container {
   margin: 50px;
 }
 

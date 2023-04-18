@@ -1,6 +1,6 @@
 import "./App.css";
 
-import Board from "./TicTacToeGame/Board";
+import Board from "./content/Board";
 
 function App() {
   return (
